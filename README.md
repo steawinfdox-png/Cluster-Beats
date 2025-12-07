@@ -84,6 +84,17 @@ Data Visualization
 2. Change "artist_name" to your preferred music artist
 3. Launch JupyterLab
 
+# Requirements
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+- nltk
+- python-dotenv
+- requests
+- groq
+
 # Results
 1. Emotional Clusters
 - The K-Means model (k=5) produced clusters that were semantically consistent when inspected qualitatively
