@@ -38,23 +38,24 @@ Data Visualization
 
 3. Sentiment Pre-Analysis (VADER)
 - Generate compound polarity score for each song
-- Classify into positive, neutral, or negative to visualize mood trends
+- Classify into positive, neutral, or negative to visualize mood trends as supportive supplemental data
 
 4. Vectorize Lyrics (TF-IDF)
 - Convert lyrics into numeric embeddings using TF-IDF
 - Extract key linguistic features for clustering
 
 5. Unsupervised Clustering (K-Means)
-- Group songs into 5 emotional clusters based purely on lyrical similarity
-- Identify meaningful structure without labels
+- Applied K-Means to TF-IDF vectors to identify latent emotional themes
+- Evaluated SSE/Elbow method to select k cluster count
 
 6. Cluster Labeling with Groq LLM
-- Summarize each cluster’s themes using LLaMA-3.3-70B via Groq API
-- Produce clean 3–5 word category names for each emotional cluster
+- Sent sample lyrics from each cluster to a Groq Llama model
+- Generated concise 3–5 word theme labels
+- Mapped each track to its theme
 
 7. Visualization
-- Plot emotional cluster distribution across 7-year timeline
-- Visualize sentiment and thematic trends using Matplotlib, Seaborn
+- Projected high-dimensional vectors into 2D (t-SNE) for visual mapping
+- Created cluster frequency charts and an emotional timeline across the 7-year discography using Matplotlib, Plotly, and Seaborn
 
 # Key Features
 - Full Discography Scraper using the Genius API to automatically download all lyrics and metadata.
