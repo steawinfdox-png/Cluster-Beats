@@ -1,0 +1,22 @@
+**THE FOLLOWING IS THE PROMPT MEANT TO BE INPUTTED TO THE GROQ-HOSTED API TO GENERATE CLUSTER LABELS**
+
+"You are an NLP expert. Below is a set of song lyric excerpts from ONE cluster.
+Your task:
+- Identify one overarching emotional/theme title representing this cluster.
+STRICT RULES:
+- 3 to 5 words
+- Plain text only
+- No punctuation except spaces
+- No lists
+- No numbering
+- No quotes
+- No markdown
+- Cannot have any words in common with the other titles
+- Titles cannot be similar in the theme they convey
+- Each title must convey a COMPLETELY different emotion/theme
+- Output ONLY the theme title (NOTHING else)
+
+CLUSTER LYRICS:
+{combined}
+
+Now output exactly one theme title:"
