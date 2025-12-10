@@ -1,3 +1,8 @@
+#IMPORT RELEVANT PACKAGES
+import pandas as pd
+import lyricsgenius
+import time
+
 genius = lyricsgenius.Genius(
     #INITIALIZE GENIUS API CLIENT
     #Copy-paste this link to set up a Genius API client and get a token: https://genius.com/developers
