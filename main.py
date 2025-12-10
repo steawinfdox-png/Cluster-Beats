@@ -13,10 +13,14 @@ sia = SentimentIntensityAnalyzer()
 from sklearn.model_selection import train_test_split
 from sentence_transformers import SentenceTransformer
 
+artist_name = "INSERT_PREFERRED_ARTIST"
+cluster_count = "INSERT_PREFERRED_CLUSTER_NO."
+genius_api_token = "INSERT_YOUR_TOKEN"
+#ENTER GROQ API TOKEN BELOW ON LINE 160!
+
 # genius api info
-steawins_api_token = "INSERT_YOUR_TOKEN"
 genius = lyricsgenius.Genius(
-    steawins_api_token,
+    genius_api_token,
     timeout=15,
     retries=3,
     skip_non_songs=True,
@@ -29,7 +33,7 @@ data = []
 scores = []
 #scrape_genius_for_StrayKids_songs
 def get_jvke(limit=500):
-    artist = genius.search_artist("Stray Kids", max_songs=limit, sort="title")
+    artist = genius.search_artist(artist_name, max_songs=limit, sort="title")
     for song in artist.songs:
         sentiment = sia.polarity_scores(song.lyrics)
         data.append({
@@ -67,12 +71,11 @@ print("Validation label distribution")
 print(val_df["Label"].value_counts())
 
 import requests
-GENIUS_API_TOKEN = "INSERT_YOUR_TOKEN"
 
 #extract title of songs
 def search_song_id(query):
     url = "https://api.genius.com/search"
-    headers = {"Authorization": f"Bearer {GENIUS_API_TOKEN}"}
+    headers = {"Authorization": f"Bearer {genius_api_token}"}
     params = {"q": query}
     r = requests.get(url, headers=headers, params=params).json()
     try:
@@ -87,7 +90,7 @@ def fetch_release_date(title):
     if song_id is None:
         return None
     url = f"https://api.genius.com/songs/{song_id}"
-    headers = {"Authorization": f"Bearer {GENIUS_API_TOKEN}"}
+    headers = {"Authorization": f"Bearer {genius_api_token}"}
     r = requests.get(url, headers=headers).json()
     try:
         return r["response"]["song"].get("release_date_for_display")
@@ -120,8 +123,7 @@ similarity_matrix[:5, :5]
 
 from sklearn.cluster import KMeans
 #creating clusters by unsupervised learning through K-Means
-k = 5
-kmeans = KMeans(n_clusters=k, random_state = 42)
+kmeans = KMeans(cluster_count, random_state = 42)
 df["Cluster"] = kmeans.fit_predict(embedding_matrix)
 df.to_csv("jvke_song_emotions.csv", index=False)
 df[["Title", "Cluster"]]
