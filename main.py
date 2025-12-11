@@ -1,1 +1,1 @@
-python FULL_PIPELINE.py
+python src/FULL_PIPELINE.py
