@@ -1,6 +1,7 @@
 <div align = "center">
   <img width="379" height="300" alt="Screenshot_2025-12-10_12 14 22_PM-removebg-preview" src="https://github.com/user-attachments/assets/fa7c03a4-15ca-4212-a3f2-4fd7c7f3de8d" />
 </div>
+<img width="548" height="214" alt="Screenshot 2025-12-10 7 10 07 PM" src="https://github.com/user-attachments/assets/6e814605-09a1-4902-b94b-e380dbd0cc87" />
 
 
 # See your Favorite Artist's Songwriting Journey and Emotional Growth!
