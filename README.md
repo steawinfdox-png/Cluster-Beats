@@ -10,8 +10,8 @@ Cluster Beats gives us truly meaningful snapshots of an artist's discography, gr
 
 ## How it works (pipeline overview)
 1. 🎼 Scrape Song Metadata & Lyrics
-* Pull complete music artist discography using the Genius API
-* Store song titles, release dates, and full lyrics for analysis
+- Pull complete music artist discography using the Genius API
+- Store song titles, release dates, and full lyrics for analysis
 2. 🧹 Preprocess Lyrics
 * Clean and normalize text (lowercase, remove punctuation, remove stopwords)
 * Filter out metadata brackets
