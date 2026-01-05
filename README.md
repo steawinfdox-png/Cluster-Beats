@@ -1,12 +1,10 @@
-<div align = "center">
-  <img width="379" height="300" alt="Screenshot_2025-12-10_12 14 22_PM-removebg-preview" src="https://github.com/user-attachments/assets/fa7c03a4-15ca-4212-a3f2-4fd7c7f3de8d" />
-</div>
 
-# Motivation
+
+## Motivation
 Lyrics change. Artists grow. But there's no easy way to track how an artist really evolves throughout their career. Traditional sentiment analysis tools oversimplify themes into "positive", "negative", and "neutral", offering no deeper look into the artist's raw thematic journey. That's why I made Cluster Beats.
 Cluster Beats gives us truly meaningful and comprehensive snapshots of a music artist's full discography and groups songs by related themes through unsupervised learning, before finally visualizing these themes and how they change and shift over time. This project is my way of combining my love for both programming and music, and helping others do the same. Music isn't simply positive and negative, and our tools to analyze music shouldn't be, either.
 
-# 🎧 Abstract
+## 🎧 Abstract
 🧠 Cluster Beats is a customizable end-to-end NLP pipeline that analyzes any and all music artists' discographies (scraped from Genius API) by clustering lyrics from all of their songs into emotional themes using TF-IDF vectorization and unsupervised learning through K-Means. Next, Cluster Beats auto-generates interpretable labels for each discography cluster using a Groq-hosted LLM, builds a emotional timeline over the artist's entire career (exact number of years can be changed), and visualizes thematic trends and patterns using Matplotlib, Plotly, and Seaborn. In addition to clustering, Cluster Beats employs the use of VADER sentiment analysis to provide baseline polarity scores for each song, allowing comparison between more traditional sentiment scoring and unsupervised learning.
 
 🎤 For demonstration, I've used Cluster Beats to analyze the K-Pop boyband, Stray Kids' entire discography from 2018-2025, to provide interested users a clear example how Cluster Beats works to analyze your favorite artist. (Additional demos are in the notebooks/ file)
@@ -89,7 +87,7 @@ Cluster Beats gives us truly meaningful and comprehensive snapshots of a music a
 * Seaborn (Trend visuals)
 * Plotly (2D PCA cluster distribution)
 
-📦 **# Requirements**
+📦 **## Requirements**
 
 * pandas
 * numpy
