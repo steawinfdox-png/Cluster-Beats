@@ -58,7 +58,7 @@ For demonstration, I've used Cluster Beats to analyze the K-Pop boyband, Stray K
 * Seaborn (Trend visuals)
 * Plotly (2D PCA cluster distribution)
 
-**How to Use Cluster Beats**
+## Using Cluster Beats on your device
 1. Install dependencies
    a. pip install -r requirements.txt
 2. Open src/FULL_PIPELINE.py
